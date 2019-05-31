@@ -5,7 +5,7 @@ from keras.layers import MaxPooling2D
 from keras.layers import Flatten
 from keras.layers import Dense
 
-# PART 1 - Building the CNN
+# BUILDING THE CNN
 # Initializing the CNN
 classifier = Sequential()
 
@@ -15,7 +15,7 @@ classifier.add(Convolution2D(filters=32, kernel_size=(3,3), input_shape = (64,64
 # Step 2 - Pooling
 classifier.add(MaxPooling2D(pool_size=(2,2), strides=2))
 
-# Adding a second convolutional layer to improve the performance of the network
+# Adding a second convolutional layer for performance improvement
 classifier.add(Convolution2D(filters=32, kernel_size=(3,3), activation='relu'))
 classifier.add(MaxPooling2D(pool_size=(2,2), strides=2))
 
@@ -29,7 +29,7 @@ classifier.add(Dense(units= 1, activation= 'sigmoid'))
 # Compiling the CNN
 classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-# Part 2 - Fitting the CNN to the images
+# GENERATING MORE TRAINING IMAGES FOR PERFORMANCE IMPROVEMENT
 from keras.preprocessing.image import ImageDataGenerator
 
 train_datagen = ImageDataGenerator(
@@ -50,6 +50,7 @@ test_set = test_datagen.flow_from_directory('dataset/test_set',
                                             batch_size=32,
                                             class_mode='binary')
 
+# TRAINING THE CLASSIFIER
 classifier.fit_generator(training_set,
                         steps_per_epoch=8000,
                         epochs=25,
