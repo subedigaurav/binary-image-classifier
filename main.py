@@ -1,6 +1,6 @@
 from keras.models import Sequential
 
-from model import build_model
+from gen_model import build_model
 import gen_training_data
 import gen_test_data
 
@@ -20,6 +20,8 @@ def build_and_train():
                         epochs=15,
                         validation_data=test_set,
                         validation_steps=1000)
+
+    model.save('classifier.hd5')
 
 
 if __name__ == "__main__":
