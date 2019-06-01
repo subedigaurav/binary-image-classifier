@@ -38,5 +38,5 @@ predict.py --path <path-to-file>
 ## License
 This project is licensed under the MIT License. Please click [here](https://opensource.org/licenses/MIT) to learn more.
 
-This is my first try. Please exuse the mess.  :grinning: <br />
-Good luck :thumbsup:, and have a nice day ahead!  :smiley:
+This is my first try. Please excuse the mess.  :grinning: <br />
+Good luck :thumbsup:, and have a nice day ahead!   :simple_smile:
