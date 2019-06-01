@@ -18,4 +18,4 @@ To run the model, you will need to install Tensorflow and Keras.
     
 Add Folders as per the classes inside the dataset directory. Then, train the classifier using the file 'classifier.py'
 
-:thumbsup: Good Luck! Have a nice day ahead!
+:thumbsup: Good Luck! Have a nice day ahead!  :smiley:
