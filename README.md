@@ -30,9 +30,6 @@ python main.py
 ```
 ## Making Predictions
 Use the file *predict.py* to make predictions on an image. Assuming *<path-to-file*> is the location of the image to be predicted, use the following code for prediction:
-```angular2
-predict.py --path <path-to-file>
-```
 
 
 ## License

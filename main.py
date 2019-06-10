@@ -4,8 +4,6 @@ from gen_model import build_model
 import gen_training_data
 import gen_test_data
 
-import argparse
-
 
 def build_and_train():
     model = build_model()
@@ -13,6 +11,9 @@ def build_and_train():
     # generate training and test dataset
     training_set = gen_training_data.gen_training_data()
     test_set = gen_test_data.gen_test_data()
+
+    # to view the training class indices
+    # training_set.class_indices
 
     # TRAINING THE CLASSIFIER
     model.fit_generator(training_set,
